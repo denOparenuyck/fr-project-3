@@ -1,0 +1,30 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Brutal Type', sans-serif;
+    position: relative;
+    font-weight: 400;
+    background: #2F3030;
+    &.active{
+        overflow: hidden;
+    }
+}
+
+
+
+.container{
+    max-width: 1323px;
+    margin: 0 auto;
+
+    @media screen and (max-width:1360px) {
+        padding: 0 30px;
+    }
+    @media screen and (max-width:460px) {
+        padding: 0 10px;
+    }
+}
+
+
+

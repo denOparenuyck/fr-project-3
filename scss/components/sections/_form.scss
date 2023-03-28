@@ -1,0 +1,309 @@
+.form {
+    padding-bottom: 14px;
+    .form-wrapper {
+
+    }
+    form{
+        width: 100%;
+        .form-inner {
+            background: #1E1E1E;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 32px 100px;
+        }
+        .form-rules {
+            margin-bottom: 25px;
+            strong{
+                display: inline-block;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 1.25;
+                color: #FFFFFF;
+                margin-bottom: 16px;
+            }
+            ol{
+                counter-reset: num;
+
+                li{
+                    position: relative;
+                    font-size: 12px;
+                    line-height: 1.25;
+                    color: #948E9E;
+                    padding-left: 12px;
+                    &::before{
+                        counter-increment: num;
+                        content: counter(num) ".";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    a{
+                        border-bottom: 1px solid #948E9E;
+                    }
+                }
+            }
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            &:not(:first-child){
+                margin-top: 10px;
+            }
+
+            strong{
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.25;
+                color: #FFFFFF;
+                margin-bottom: 5px;
+            }
+
+            input,
+            textarea{
+                background: #0F0F0F;
+                border-radius: 3px;
+                border: none;
+                outline: none;
+                padding: 8px 10px;
+                font-family: 'Brutal Type';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.25;
+                color: #948E9E;
+
+                &::placeholder{
+                    font-family: 'Brutal Type';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 1.25;
+                    color: #948E9E;
+                }
+                &:-moz-placeholder,
+                &::-moz-placeholder{
+                    font-family: 'Brutal Type';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 1.25;
+                    color: #948E9E;
+                }
+            }
+            textarea{
+                height: 209px;
+                overflow-y: auto;
+                resize: none;
+            }
+
+
+            label{
+                &:not(:first-child){
+                    margin-top: 8px;
+                }
+                input[type="radio"]{
+
+                    display: none;
+                    &:checked + strong::after{
+                        opacity: 1;
+                    }
+                }
+                strong{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    &::before{
+                        content: "";
+                        display: block;
+                        flex: 0 0 auto;
+                        width: 18px;
+                        height: 18px;
+                        background: #2F3030;
+                        border-radius: 50%;
+                        margin-right: 5px;
+                    }
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 18px;
+                        height: 18px;
+                        background: #F7C33C;
+                        border-radius: 50%;
+                        opacity: 0;
+                    }
+                }
+            }
+
+            
+        }
+        .form-field__wrapper {
+        }
+        .form-field__date{
+            margin-bottom: 10px;
+            .form-field__date-wrapper{
+                width: 100%;
+                max-width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input{
+                    width: 100%;
+                    background: #2F3030;
+                    border-radius: 3px;
+                    border: none;
+                    outline: none;
+                    text-align: center;
+                    padding: 8px;
+                    font-family: 'Brutal Type';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #948E9E;
+                    line-height: 1.25;
+                    &:not(:first-child){
+                        margin-left: 10px;
+                    }
+                    &::placeholder{
+                        font-family: 'Brutal Type';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 1.25;
+                        color: #948E9E;
+                    }
+                    &:-moz-placeholder,
+                    &::-moz-placeholder{
+                        font-family: 'Brutal Type';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 1.25;
+                        color: #948E9E;
+                    }
+                }
+            }
+            strong{
+                display: inline-block;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.25;
+                color: #FFFFFF;
+                margin-bottom: 5px;
+            }
+        }
+        .form-field__time {
+            strong{
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.25;
+                color: #FFFFFF;
+                margin-bottom: 5px;
+            }
+            .form-field__time-wrapper {
+                width: 100%;
+                max-width: 75px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                label{
+                    position: relative;
+                    &:not(:first-child){
+                        margin-left: 3px;
+                        &:not(:first-child){
+                            padding-left: 6px;
+                            &::before{
+                                content: ':';
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 0;
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 12px;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+
+                input{
+                    width: 100%;
+                    background: #2F3030;
+                    border-radius: 3px;
+                    border: none;
+                    outline: none;
+                    text-align: center;
+                    padding: 8px;
+                    font-family: 'Brutal Type';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 1.25;
+                    color: #948E9E;
+                    &::placeholder{
+                        font-family: 'Brutal Type';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 1.25;
+                        color: #948E9E;
+                    }
+                    &:-moz-placeholder,
+                    &::-moz-placeholder{
+                        font-family: 'Brutal Type';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 1.25;
+                        color: #948E9E;
+                    }
+                }
+            }
+        }
+
+
+        .form-field__button{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            button{
+                font-family: 'Brutal Type';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 10px;
+                color: #FFFFFF;
+                padding: 8px 45px;
+                background: #F7C33C;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover{
+                    background: #c3982a;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:740px) {
+    .form{
+        form{
+            .form-inner{
+                max-width: 100%;
+                padding: 15px;
+            }
+        }
+    }
+}
